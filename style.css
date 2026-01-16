@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    background: #f5f5f5;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #eee;
+  }
+
+  .name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  .series {
+    font-style: italic;
+    cursor: default;
+  }
+
+  .character {
+    font-size: 0.8rem;
+    color: #666;
+    cursor: default;
+  }
+
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px black;
+    background: #fff;
+  }
+
+  .summary {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f3f3f3;
+    border-radius: 8px;
+  }
+  
+  .summary div {
+    font-size: 0.95rem;
+  }
+
+  .card .pricing {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .card .price {
+    font-weight: bold;
+  }
+  
+  .card .sale-price {
+    color: green;
+  }
+  
+  .card .list-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+  }
+  
+  .card .discount {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
