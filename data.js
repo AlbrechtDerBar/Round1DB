@@ -1,4 +1,6 @@
+// maxid: 62
 const figures = [
+  //#region Figures
   {
     id: 1,
     name: "SEGA-Luminasta Frieren: Beyond Journey's End Frieren ~Maid Costume~ Figure",
@@ -504,6 +506,56 @@ const figures = [
     type: "Figure",
   },
   {
+    id: 57,
+    name: "Demon Slayer: Kimetsu no Yaiba Noodle Stopper Tomioka Giyu",
+    series: "Demon Slayer",
+    manufacturer: "Furyu",
+    character: "Tomioka Giyu",
+    image: "Images/ed98bfa3-8ae0-4670-ba4a-1715842b6bf8.jpg",
+    link: "https://www.amazon.com/Furyu-Slayer-Kimetsu-Stopper-Tomioka/dp/B0G6M74SZH",
+    price: "46.50",
+    salePrice: "",
+    type: "Figure",
+  },
+  {
+    id: 58,
+    name: "Demon Slayer: Kimetsu no Yaiba Noodle Stopper Zenitsu Agatsuma",
+    series: "Demon Slayer",
+    manufacturer: "Furyu",
+    character: "Zenitsu Agatsuma",
+    image: "Images/979141f7-88d6-4be6-be77-46d262333352.jpg",
+    link: "",
+    price: "",
+    salePrice: "",
+    type: "Figure",
+  },
+  {
+    id: 59,
+    name: "Demon Slayer: Kimetsu no Yaiba Noodle Stopper Tanjiro Kamado",
+    series: "Demon Slayer",
+    manufacturer: "Furyu",
+    character: "Tanjiro Kamado",
+    image: "Images/eb71a78b-5db3-4bc6-9e13-f80bff6d4fff.jpg",
+    link: "",
+    price: "",
+    salePrice: "",
+    type: "Figure",
+  },
+  {
+    id: 60,
+    name: "Hunter X Hunter - Gon Noodle Stopper",
+    series: "Hunter X Hunter",
+    manufacturer: "Furyu",
+    character: "Gon",
+    image: "Images/6a82377a-056a-446c-beab-24f96a71756d.jpg",
+    link: "https://www.amazon.com/Furyu-Figurine-Hunter-Stopper-4582655074514/dp/B0CSWW2K16",
+    price: "34.93",
+    salePrice: "",
+    type: "Figure",
+  },
+  //#endregion
+  //#region Plush
+  {
     id: 43,
     name: "GS9841 Korilakkuma Holding Cherry Blossom",
     series: "Rilakkuma",
@@ -671,4 +723,29 @@ const figures = [
     salePrice: "",
     type: "Plush",
   },
+  {
+    id: 61,
+    name: "Snow Miku Potekoro Mascot M size 2011 ver.",
+    series: "Vocaloid",
+    manufacturer: "Piapro",
+    character: "Snow Miku 2011 ver.",
+    image: "Images/fa73ce48-c312-418e-bea1-648a66da0a5b.jpg",
+    link: "",
+    price: "",
+    salePrice: "",
+    type: "Plush",
+  },
+  {
+    id: 62,
+    name: "Snow Miku Potekoro Mascot M size 2015 ver.",
+    series: "Vocaloid",
+    manufacturer: "Piapro",
+    character: "Snow Miku 2015 ver.",
+    image: "Images/9a8e49d1-20fe-4aaf-af77-0994ea592528.jpg",
+    link: "",
+    price: "",
+    salePrice: "",
+    type: "Plush",
+  },
+  // #endregion
 ];
