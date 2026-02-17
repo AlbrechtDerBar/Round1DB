@@ -1,5 +1,6 @@
 const searchInput = document.getElementById("search");
 const results = document.getElementById("results");
+const figuresList = [...figures, ...plushes];
 
 // Summary elements
 const totalPriceEl = document.getElementById("total-price");
@@ -31,10 +32,10 @@ function calculateTotals(list) {
 }
 
 // Initial render of all figures
-render(figures);
+render(figuresList);
 
 // Set initial totals for the entire collection
-const collectionTotals = calculateTotals(figures);
+const collectionTotals = calculateTotals(figuresList);
 totalPriceEl.textContent = collectionTotals.price.toFixed(2);
 totalSaleEl.textContent = collectionTotals.sale.toFixed(2);
 
@@ -43,7 +44,7 @@ searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
 
   // Filter the figures based on the search query
-  const filtered = figures.filter(fig =>
+  const filtered = figuresList.filter(fig =>
     fig.name.toLowerCase().includes(query) ||
     fig.series.toLowerCase().includes(query) ||
     fig.manufacturer.toLowerCase().includes(query) ||
