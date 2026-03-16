@@ -39,6 +39,12 @@ const collectionTotals = calculateTotals(figuresList);
 totalPriceEl.textContent = collectionTotals.price.toFixed(2);
 totalSaleEl.textContent = collectionTotals.sale.toFixed(2);
 
+figuresList.forEach((fig) => {
+  if(fig.manufacturer == undefined) {
+    console.log(fig.id)
+  }
+})
+
 // Listen for input changes on the search field
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
@@ -51,6 +57,8 @@ searchInput.addEventListener("input", () => {
     fig.character.toLowerCase().includes(query) ||
     fig.type.toLowerCase().includes(query)
   );
+
+  console.log(filtered)
 
   // Calculate totals for the filtered search results
   const searchTotals = calculateTotals(filtered);
