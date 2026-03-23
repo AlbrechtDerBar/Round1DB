@@ -51,11 +51,11 @@ searchInput.addEventListener("input", () => {
 
   // Filter the figures based on the search query
   const filtered = figuresList.filter(fig =>
-    fig.name.toLowerCase().includes(query) ||
-    fig.series.toLowerCase().includes(query) ||
-    fig.manufacturer.toLowerCase().includes(query) ||
-    fig.character.toLowerCase().includes(query) ||
-    fig.type.toLowerCase().includes(query)
+      fig?.name?.toLowerCase().includes(query) ||
+      fig?.series?.toLowerCase().includes(query) ||
+      fig?.manufacturer?.toLowerCase().includes(query) ||
+      fig?.character?.toLowerCase().includes(query) ||
+      fig?.type?.toLowerCase().includes(query)
   );
 
   console.log(filtered)
