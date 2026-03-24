@@ -1354,7 +1354,7 @@ const plushes = [
   },
   {
     id: 36,
-    name: "M Plush Hatsune Miku Maid",
+    name: "Hatsune Miku Series Fuwapuchi M Plush Toy \"Hatsune Miku - Classical Maid\"",
     series: Series.vocaloid,
     character: Character.miku,
     image: "Images/19383fd9-ed1a-4dc7-a020-7cb03ed7e566.jpg",
@@ -1365,7 +1365,7 @@ const plushes = [
   },
   {
     id: 37,
-    name: "L Plush Hatsune Miku Catgirl",
+    name: "Hatsune Miku Project DIVA Arcade Future Tone Fuwapuchi LL Plush Toy \"Hatsune Miku - Kitty\"",
     series: Series.vocaloid,
     character: Character.miku,
     image: "Images/18f4b643-4df2-41df-98dd-0958cec7dd0d.jpg",
