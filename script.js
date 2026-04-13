@@ -58,34 +58,27 @@ searchInput.addEventListener("input", () => {
       fig?.type?.toLowerCase().includes(query)
   );
 
-  console.log(filtered)
+  console.log(filtered);
 
   // Calculate totals for the filtered search results
   const searchTotals = calculateTotals(filtered);
   searchPriceEl.textContent = searchTotals.price.toFixed(2);
   searchSaleEl.textContent = searchTotals.sale.toFixed(2);
 
-  // Render the filtered results
-  render(filtered);
+  // Filter the cards based on the current search results
+  filterList(filtered);
 });
 
 // Render function for displaying the figures in the grid
 function render(list) {
+  // Clear the results container to avoid duplicate rendering
   results.innerHTML = "";
-
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  // If no results, show "No results found."
-  if (list.length === 0) {
-    results.innerHTML = "<p>No results found.</p>";
-    return;
-  }
 
   // Loop through each figure and create a card for it
   list.forEach(fig => {
     const card = document.createElement("div");
     card.className = "card";
+    card.dataset.itemId = `${fig.type}-${fig.id}`;
 
     // Parse the price and salePrice to numbers, or set to null if they don't exist
     const price = parsePrice(fig.price);
@@ -117,6 +110,9 @@ function render(list) {
   });
 
   // Set up the image click handler to enlarge the image
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
   results.addEventListener("click", (e) => {
     if (e.target.classList.contains("figure-img")) {
       lightboxImg.src = e.target.src;
@@ -128,5 +124,21 @@ function render(list) {
   lightbox.addEventListener("click", () => {
     lightbox.style.display = "none";
     lightboxImg.src = "";
+  });
+}
+
+function filterList(list) {
+  const keySet = new Set(list.map(item => `${item.type}-${item.id}`));
+
+  const allCards = document.querySelectorAll(".card");
+
+  allCards.forEach(card => {
+    const itemId = card.dataset.itemId;
+
+    if (keySet.has(itemId)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
   });
 }
